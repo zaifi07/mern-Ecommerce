@@ -22,7 +22,7 @@ const server = express();
 
 // Middlewares
 server.use(cors({
-    origin: 'https://ayesha-fyp.vercel.app/',
+    origin: process.env.ORIGIN,
     credentials: true,
     exposedHeaders: ['X-Total-Count'],
     methods: ['GET', 'POST', 'PATCH', 'DELETE']
